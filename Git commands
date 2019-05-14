@@ -1,0 +1,39 @@
+git clone [link repo]								# clone ony repo
+git diff [ID 1 commit] [ID 2 commit]				# compare diff
+git config --global color.ui auto					# color red and green when use git diff (global = all project)
+
+git log												# historic of commits
+git checkout [id commit]							# go to old commit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Change Shell Color 
+Linux/Mac: https://classroom.udacity.com/courses/ud775/lessons/2980038599/concepts/33331589510923
+Win: https://classroom.udacity.com/courses/ud775/lessons/2980038599/concepts/33417185870923
+
+# colors!
+green="\[\033[1;32m\]"
+blue="\[\033[1;34m\]"				My config colors
+purple="\[\033[1;35m\]"
+reset="\[\033[0m\]"
+
+(If you have sublime 3 or up, do not enter with line below in ".bashrc" or ".bash_profile")
+alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
