@@ -1,0 +1,32 @@
+LIÇÂO 2
+
+O que acontece quando você inicializa um repositório? Por que você precisa fazer isso?
+
+Quando inicializamos um repositório (git init), uma pasta chamada .git (oculto) é criada, que armazenará metadados sobre as versões de cada commit, esse .git estará associado ao diretório em que foi iniciado.
+Essa pasta precisa ser iniciada, pois sem ela não será possível saber o que foi modificado em cada commit, é o que garante múltiplas versões de um mesmo arquivo em um repositório.
+
+****************
+
+Como a área de preparação é diferente do diretório de trabalho e do repositório? Qual valor você acha que ela oferece?
+
+A área de preparação (git status) serve para escolher quais arquivos farão parte do próximo commit (com git add), não modifica nenhum arquivo no diretório, apenas serve para configurar quais arquivos do diretório serão versionados. A staging area (área de preparação) é o reflexo do último commit do repositório enquanto vazia, depois reflete ela mesma. O repositório seria o conjunto de todas as versões de arquivos do diretório "commitadas".
+O valor da staging area está justamente na possibilidade de configurar seus commits, podendo escolher quais dos trabalhos serão versionados, quando, e com qual arquivo de sua escolha, deixando muito mais organizado.
+
+****************
+
+Como você pode usar a área de preparação para garantir que tenha um commit por alteração lógica?
+
+Por exemplo no caso de mudanças em múltiplos arquivos (do dir) com vários tipos de lógicas (new feature, bug, etc), em que é mais vantajoso commitar de acordo com seu tipo de mudança; poderia usar "git diff" para comparar as diferenças entre o dir e o stage (que no caso é o mesmo que o ultimo commit, até ser add, então se torna o add) e "git add <>" para criar um commit por alteração lógica, podendo usar "git --stage" (compara com o da repo)para garantir que somente as modificações específicas estão no stage. Talvez o ponto principal seja saber como fazer um commit por alteração logica o mais efetivo possível.
+
+*****************
+
+Quais são algumas situações em que os ramos seriam úteis para manter seu histórico
+organizado? Como as agências ajudariam?
+
+Como os diagramas ajudam você a visualizar a estrutura da ramificação?
+
+Qual é o resultado da fusão de dois ramos juntos? Por que representamos isso em
+o diagrama da maneira que fazemos?
+
+Quais são os prós e contras da fusão automática do Git vs. sempre fazendo mesclagens
+manualmente?

@@ -1,29 +1,28 @@
-git clone [link repo]								# clone ony repo
-git diff [ID 1 commit] [ID 2 commit]				# compare diff
-git config --global color.ui auto					# color red and green when use git diff (global = all project)
+git clone [link repo]								# Clone any repo
+git diff [ID 1 commit] [ID 2 commit]				# Compare diff
+git diff [no arguments]								# Compare directory with staging area (show alt not are in stage)
+git diff --stage									# Compare files in stage with last in repositories (only the add)
+git config --global color.ui auto					# Color red and green when use git diff (global = all project)
 
-git log												# historic of commits
-git checkout [id commit]							# go to old commit
+git log												# Historic of commits
+git checkout [id commit]							# Go to old commit
 
+git init											# Iniciate new local repositore on current directory 
+git status											# Display the staging area
+git add [file name]									# Add files for stage
+git add .											# Add all files for stage (modified and untracked)
+git remove [file name]								# Remove file from stage 
 
+git commits											# Open the Txt-Edit for choose the name of commit and save a new version of repo
+git commit -m "commit msg"							# Save you new version without open the Txt-edit
 
-
-
-
-
-
-
-
-
-
-
-
-
+git reset --hard									# Discasts all changes in directory and stage (reset for repo files)[WARNING]
 
 
 
+Git Commit Message Style Guide						# https://udacity.github.io/git-styleguide/
 
-
+Git/GitHub Cheating									# https://github.com/github/training-kit/blob/master/downloads/github-git-cheat-sheet.pdf
 
 Change Shell Color 
 Linux/Mac: https://classroom.udacity.com/courses/ud775/lessons/2980038599/concepts/33331589510923
@@ -37,3 +36,19 @@ reset="\[\033[0m\]"
 
 (If you have sublime 3 or up, do not enter with line below in ".bashrc" or ".bash_profile")
 alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
+
+
+
+
+
+
+
+
+
+
+
+
+
+Volta para um commit específico (apaga todos os outros)
+git reset --hard "nome da tag ou Hash do Commit!"
+git push origin HEAD --force
