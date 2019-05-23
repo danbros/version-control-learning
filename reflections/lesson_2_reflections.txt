@@ -16,17 +16,23 @@ O valor da staging area está justamente na possibilidade de configurar seus com
 
 Como você pode usar a área de preparação para garantir que tenha um commit por alteração lógica?
 
-Por exemplo no caso de mudanças em múltiplos arquivos (do dir) com vários tipos de lógicas (new feature, bug, etc), em que é mais vantajoso commitar de acordo com seu tipo de mudança; poderia usar "git diff" para comparar as diferenças entre o dir e o stage (que no caso é o mesmo que o ultimo commit, até ser add, então se torna o add) e "git add <>" para criar um commit por alteração lógica, podendo usar "git --stage" (compara com o da repo)para garantir que somente as modificações específicas estão no stage. Talvez o ponto principal seja saber como fazer um commit por alteração logica o mais efetivo possível.
+Por exemplo no caso de mudanças em múltiplos arquivos (do dir) com vários tipos de lógicas (new feature, bug, etc), em que é mais vantajoso commitar de acordo com seu tipo de mudança; poderia usar "git diff" para comparar as diferenças entre o dir e o stage (que no caso é o mesmo que o ultimo commit, até ser add, então se torna o add) e "git add <>" para criar um commit por alteração lógica, podendo usar "git --stage" (compara com o da repo)para garantir que somente as modificações específicas estão no stage. É interessante usar o stage para comparar arquivos individuais. Talvez o ponto principal seja saber como fazer um commit por alteração logica o mais efetivo possível.
 
 *****************
 
-Quais são algumas situações em que os ramos seriam úteis para manter seu histórico
-organizado? Como as agências ajudariam?
+Quais são algumas das situações em que branches seriam úteis para manter seu histórico organizado? Como branches ajudariam?
 
-Como os diagramas ajudam você a visualizar a estrutura da ramificação?
+Manter versões diferentes de um projeto, dividir o desenvolvimento, testar mudanças sem afetar o branch principal.
 
-Qual é o resultado da fusão de dois ramos juntos? Por que representamos isso em
-o diagrama da maneira que fazemos?
+*****************
+
+Como os diagramas ajudam a visualizar a estrutura de branches?
+
+Ajudam a entender onde cada branche começa, entender o padrão da extrutura (que se parece com uma árvore genealógica assexuada) e como cada um interage com o outro, nos dando liberdade de modificação.
+
+*****************
+
+Qual é o resultado da mesclagem de dois branches? Por que o representamos no diagrama dessa forma?
 
 Quais são os prós e contras da fusão automática do Git vs. sempre fazendo mesclagens
 manualmente?

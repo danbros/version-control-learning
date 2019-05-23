@@ -5,7 +5,7 @@ git diff --stage									# Compare files in stage with last in repositories (onl
 git config --global color.ui auto					# Color red and green when use git diff (global = all project)
 
 git log												# Historic of commits
-git checkout [id commit]							# Go to old commit
+git checkout [id commit]							# Go to old commit (Att files for version at commit)
 
 git init											# Iniciate new local repositore on current directory 
 git status											# Display the staging area
@@ -18,11 +18,33 @@ git commit -m "commit msg"							# Save you new version without open the Txt-edi
 
 git reset --hard									# Discasts all changes in directory and stage (reset for repo files)[WARNING]
 
+git branch											# Display all branch on repository
+git branch <any name>								# create new branch with name given
+git checkout <branch name>							# Go to branch (commit will be make here now)
+
+git checkout master									# Go to commit master			
+git log --graph [--oneline] <name branch> <name branch>		# Show the structures of branches (with --oneline show exit small)
+HEAD												# Curent commit
+git checkout -b <name new branch>					# = git branch <name new branch> + git checkout <name new branch>
+
+git merge <branch 1> <branch 2>	{*and HEAD*}		# Open editor for name you new "Merge branch"(look for what snap you point are)
+git merge --abort									# Abort merge
+git show <id commit>								# = git diff <you commit> <parent of you commit>
+git branch -d <name branch>							# Exclude the label branch (normally use after merge)
+git merge --abort					
+
+
 
 
 Git Commit Message Style Guide						# https://udacity.github.io/git-styleguide/
 
 Git/GitHub Cheating									# https://github.com/github/training-kit/blob/master/downloads/github-git-cheat-sheet.pdf
+
+Conflito de mesclagem (caracteres de nova linha entre sistemas Windows e Unix)
+https://help.github.com/articles/dealing-with-line-endings/#platform-all
+https://help.github.com/en/articles/resolving-a-merge-conflict-using-the-command-line
+
+
 
 Change Shell Color 
 Linux/Mac: https://classroom.udacity.com/courses/ud775/lessons/2980038599/concepts/33331589510923
@@ -39,16 +61,11 @@ alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 
 
 
+Voltar 1 commit anterior e apagá-lo (só no git)
+git reset --hard HEAD~1
 
 
-
-
-
-
-
-
-
-
-Volta para um commit específico (apaga todos os outros)
+Volta para um commit específico no github (apaga todos os outros)
 git reset --hard "nome da tag ou Hash do Commit!"
 git push origin HEAD --force
+https://www.natanaelfonseca.com.br/2013/06/git-revertendo-para-um-commit-especifico.html
